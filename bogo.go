@@ -5,19 +5,19 @@ import "sort"
 import "math/rand"
 
 func Sort(arr []int) {
-	if sort.IntsAreSorted(arr) {
+	for {
+		if sort.IntsAreSorted(arr) {
+			fmt.Println("\nArray sorted!")
+			fmt.Println("=============\n")
 
-		fmt.Println("\nArray sorted!")
-		fmt.Println("=============\n")
-
-		for _, element := range arr {
-			fmt.Printf("%d ", element)
+			for _, element := range arr {
+				fmt.Printf("%d ", element)
+			}
+			break
 		}
 
-	} else {
-		newArr := shuffle(arr[:])
-		fmt.Println(newArr)
-		Sort(newArr[:])
+		arr = shuffle(arr[:])
+		fmt.Println(arr)
 	}
 }
 
