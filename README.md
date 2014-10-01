@@ -1,9 +1,20 @@
-go-bogo
-=======
+# go-bogo
 
-A barebones, simplistic bogosort implementation in Golang.
+ A barebones, simplistic bogosort implementation in Go.
 
-TODO:
------
+## Installation
 
-- Extend this to include goroutines, for awesome concurrent bogosorting goodness. /s
+```
+$ go get github.com/jsec/go-bogo
+```
+
+## Example
+
+```go
+var array = []int {42, 51, 62, 21, 91, 12, 33, 102, 49, 88}
+bogo.Sort(array)
+```
+
+# License
+
+ MIT
