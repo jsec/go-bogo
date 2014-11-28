@@ -1,23 +1,15 @@
 package bogo
 
-import "fmt"
 import "sort"
 import "math/rand"
 
-func Sort(arr []int) {
+func Sort(arr []int) []int {
 	for {
 		if sort.IntsAreSorted(arr) {
-			fmt.Println("\nArray sorted!")
-			fmt.Println("=============\n")
-
-			for _, element := range arr {
-				fmt.Printf("%d ", element)
-			}
-			break
+			return arr
 		}
 
 		arr = shuffle(arr[:])
-		fmt.Println(arr)
 	}
 }
 
